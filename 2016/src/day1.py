@@ -1,6 +1,10 @@
 #Advent day 1, some direction stuff
 #Each part of the input is a direction + how many steps you take after that
 
+def read_instructions(path):
+    with open(path, 'r') as f:
+        return f.readlines() 
+
 class distancer(object):
 
     def __init__(self):
@@ -54,14 +58,13 @@ class distancer(object):
             else:
                 self.hist |= set([tupped])
         return False
-            
 
-if __name__ == '__main__':
-
-    instructions = 'L4, L3, R1, L4, R2, R2, L1, L2, R1, R1, L3, R5, L2, R5, L4, L3, R2, R2, L5, L1, R4, L1, R3, L3, R5, R2, L5, R2, R1, R1, L5, R1, L3, L2, L5, R4, R4, L2, L1, L1, R1, R1, L185, R4, L1, L1, R5, R1, L1, L3, L2, L1, R2, R2, R2, L1, L1, R4, R5, R53, L1, R1, R78, R3, R4, L1, R5, L1, L4, R3, R3, L3, L3, R191, R4, R1, L4, L1, R3, L1, L2, R3, R2, R4, R5, R5, L3, L5, R2, R3, L1, L1, L3, R1, R4, R1, R3, R4, R4, R4, R5, R2, L5, R1, R2, R5, L3, L4, R1, L5, R1, L4, L3, R5, R5, L3, L4, L4, R2, R2, L5, R3, R1, R2, R5, L5, L3, R4, L5, R5, L3, R1, L1, R4, R4, L3, R2, R5, R1, R2, L1, R4, R1, L3, L3, L5, R2, R5, L1, L4, R3, R3, L3, R2, L5, R1, R3, L3, R2, L1, R4, R3, L4, R5, L2, L2, R5, R1, R2, L4, L4, L5, R3, L4'
-
+def main(instructions):
     test = distancer()
     print test.total_dist(instructions)
     test = distancer()
     print test.total_dist_hist(instructions)
 
+if __name__ == '__main__':
+    instructions = read_instructions('instructions/day1.txt')[0]
+    main(instructions)
