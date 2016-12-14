@@ -66,5 +66,5 @@ def main(instructions):
     print test.total_dist_hist(instructions)
 
 if __name__ == '__main__':
-    instructions = read_instructions('instructions/day1.txt')[0]
+    instructions = read_instructions('input/day1.txt')[0]
     main(instructions)

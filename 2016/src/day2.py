@@ -10,6 +10,7 @@ class Keypad(object):
         #layout  = {1: (1,2,4,1), 2: (2,3,5,1), 3: (3,3,6,2),
         #               4: (1,5,7,4), 5: (2,6,8,4), 6: (3,6,9,5),
         #               7: (4,8,7,7), 8: (5,9,8,7), 9: (6,9,9,8)} 
+        
         return layout
 
     def find_code(self, inst):
@@ -43,6 +44,6 @@ def main(inst):
 if __name__ == '__main__':
     toy = ['ULL', 'RRDDD', 'LURDL', 'UUUUD']
     main(toy)
-    instructions = read_instructions('instructions/day2.txt')
+    instructions = read_instructions('input/day2.txt')
     main(instructions)
     
