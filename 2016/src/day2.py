@@ -7,9 +7,6 @@ class Keypad(object):
         self.keypad = self.parse_keypad(key_layout)
     
     def parse_keypad(self, kp):
-        #layout  = {1: (1,2,4,1), 2: (2,3,5,1), 3: (3,3,6,2),
-        #               4: (1,5,7,4), 5: (2,6,8,4), 6: (3,6,9,5),
-        #               7: (4,8,7,7), 8: (5,9,8,7), 9: (6,9,9,8)} 
         key_dict = {}
         k = kp.split('\n')
         k.pop(-1)
