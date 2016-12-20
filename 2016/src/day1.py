@@ -1,5 +1,4 @@
-#Advent day 1, some direction stuff
-#Each part of the input is a direction + how many steps you take after that
+from timeit import timeit
 
 def read_instructions(path):
     with open(path, 'r') as f:
@@ -59,6 +58,7 @@ class distancer(object):
                 self.hist |= set([tupped])
         return False
 
+@timeit
 def main(instructions):
     test = distancer()
     print test.total_dist(instructions)

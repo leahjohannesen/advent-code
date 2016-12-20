@@ -15,7 +15,7 @@ def find_hash(key):
             except:
                 pass
         idx += 1
-    return pw
+    return ''.join(pw)
 
 def main():
     #Part 1
