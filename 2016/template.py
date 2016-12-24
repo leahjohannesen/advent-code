@@ -2,7 +2,7 @@ from timeit import timeit
 
 def read_instructions(fp):
     with open(fp, 'r') as f:
-        return f.readlines()
+        return f.read().split('\n')
 
 @timeit
 def part1():
@@ -11,7 +11,7 @@ def part1():
 @timeit
 def part2():
     pass
-    
+
 if __name__=='__main__':
     part1()
     part2()

@@ -2,7 +2,7 @@ from timeit import timeit
 
 def read_instructions(path):
     with open(path, 'r') as f:
-        return f.readlines() 
+        return f.readlines()
 
 class distancer(object):
 
@@ -27,7 +27,7 @@ class distancer(object):
             update = self.calc_step(step)
             if self.take_steps(update):
                 break
-        return sum(map(abs,self.dist)) 
+        return sum(map(abs,self.dist))
 
     def calc_step(self, step):
         step_dir = step[0]
@@ -66,5 +66,5 @@ def main(instructions):
     print test.total_dist_hist(instructions)
 
 if __name__ == '__main__':
-    instructions = read_instructions('input/day1.txt')[0]
+    instructions = read_instructions('day1/input.txt')[0]
     main(instructions)
