@@ -10,8 +10,9 @@ class Keypad(object):
     
     def print_kp(self):
         for i in range(6):
-            print self.kp[i]
-    
+            pretty = ['X' if x == 1 else ' ' for x in self.kp[i]] 
+            print ''.join(pretty)
+   
     def solve(self, inst):
         map(self.parse_inst, inst)
         return sum(map(sum, self.kp))
