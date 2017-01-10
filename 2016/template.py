@@ -1,8 +1,8 @@
-from timeit import timeit
+from timething import timeit
 
 def read_instructions(fp):
     with open(fp, 'r') as f:
-        return f.read().split('\n')
+        return f.read().split('\n')[:-1]
 
 @timeit
 def part1():
