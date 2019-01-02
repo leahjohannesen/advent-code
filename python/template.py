@@ -1,4 +1,4 @@
-from timething import timeit
+#from timething import timeit
 
 def read_instructions(fp):
     with open(fp, 'r') as f:
@@ -13,5 +13,6 @@ def part2():
     pass
 
 if __name__=='__main__':
+    inst = read_instructions('text.txt')
     part1()
     part2()
