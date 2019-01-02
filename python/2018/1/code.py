@@ -20,7 +20,9 @@ def part2(inst):
 
 def part2a(inst):
     #cool improvement, make a generator rather than while
-    pass
+    from itertools import accumulate, cycle
+    seen = set()
+    return next(f for f in accumulate(cycle(changes)) if f in seen or seen.add(f))
 
 if __name__=='__main__':
     inst = read_instructions('text.txt')
